@@ -13,7 +13,7 @@ export function App() {
       <Button variant="danger"/>
       <Button />
 
-      <GlobalStyle />
+      <GlobalStyle /> 
     </ThemeProvider>
   );
 }
