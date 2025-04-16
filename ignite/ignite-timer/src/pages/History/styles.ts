@@ -14,9 +14,9 @@ export const HistoryContainer = styled.main`
 `;
 
 export const HistoryList = styled.div`
-flex: 1;
-overflow: auto;
-margin-top: 2rem;
+  flex: 1;
+  overflow: auto;
+  margin-top: 2rem;
 
   table {
     width: 100%;
@@ -24,7 +24,7 @@ margin-top: 2rem;
     min-width: 600px;
 
     th {
-      background-color: ${(props) => props.theme["gray-600"]};3
+      background-color: ${(props) => props.theme["gray-600"]};
       padding: 1rem;
       text-align: left;
       color: ${(props) => props.theme["gray-100"]};
@@ -38,7 +38,7 @@ margin-top: 2rem;
 
       &:last-child {
         border-top-right-radius: 8px;
-        padding-left: 1.5rem;
+        padding-right: 1.5rem;
       }
     }
 
@@ -54,9 +54,35 @@ margin-top: 2rem;
         padding-left: 1.5rem;
       }
 
-      &:last-child{
+      &:last-child {
         padding-right: 1.5rem;
       }
     }
-  } 
+  }
+`;
+
+const STATUS_COLORS = {
+  yellow: 'yellow-500',
+  green: 'green-500',
+  red: 'red-500',
+} as const
+
+interface StatusProps {
+  statuscolors: keyof typeof STATUS_COLORS
+}
+
+export const Status = styled.span.withConfig({
+  shouldForwardProp: (prop) => prop === 'statuscolors' || prop === 'children',
+})<StatusProps>`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: ${(props) => props.theme[STATUS_COLORS[props.statuscolors]]};
+  }
 `;
