@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CyclesContext } from "../../contexts/CyclesContext";
-import { HistoryContainer, HistoryList, Status } from "./styles";
+import { HistoryContainer, HistoryList, Status } from "./HistoryStyles";
 
 export function History() {
   const { cycles } = useContext(CyclesContext);
