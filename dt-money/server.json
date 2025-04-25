@@ -39,6 +39,14 @@
       "type": "outcome",
       "createdAt": "2025-04-25T19:48:50.677Z",
       "id": 5
+    },
+    {
+      "description": "Testando02 Entrada",
+      "price": 18,
+      "category": "Teste",
+      "type": "income",
+      "createdAt": "2025-04-25T20:59:08.520Z",
+      "id": 6
     }
   ]
 }
