@@ -23,6 +23,22 @@
       "category": "Educação",
       "price": 1980,
       "createdAt": "2022-07-29T19:24:44.505Z"
+    },
+    {
+      "description": "Testando",
+      "price": 20,
+      "category": "Teste",
+      "type": "income",
+      "createdAt": "2025-04-25T19:48:21.934Z",
+      "id": 4
+    },
+    {
+      "description": "Testando Saída",
+      "price": 30,
+      "category": "Teste Saída",
+      "type": "outcome",
+      "createdAt": "2025-04-25T19:48:50.677Z",
+      "id": 5
     }
   ]
 }
